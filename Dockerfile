@@ -1,4 +1,4 @@
-FROM python:3.11.0
+FROM python:3.11.7-alphine3.18
 
 WORKDIR /predict-api 
 
@@ -8,7 +8,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 ENV PORT=8080
 
-# EXPOSE 8080
+EXPOSE 8080
 
 CMD ["python", "main.py"]
 
