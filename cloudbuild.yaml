@@ -1,0 +1,15 @@
+Step: 
+  # Build the container image
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/predict-api', '.']
+
+  # Push the container image to Container Registry
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/$PROJECT_ID/predict-api']
+
+  # Deploy container image to Cloud Run
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['beta', 'run', 'deploy', 'predict-api', '--image', 'gcr.io/$'PROJECT_ID/predict-api', '--region', 'us-central1', '--platform', 'managed', '--allow-unauthenticated']
+  
+image: 
+- 'gcr.io/$PROJECT_ID/predict-api'
