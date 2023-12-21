@@ -9,7 +9,7 @@ Step:
 
   # Deploy container image to Cloud Run
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['beta', 'run', 'deploy', 'predict-api', '--image', 'gcr.io/$'PROJECT_ID/predict-api', '--region', 'us-central1', '--platform', 'managed', '--allow-unauthenticated']
-  
+  args: ['beta', 'run', 'deploy', 'predict-api', '--image', 'gcr.io/$PROJECT_ID/predict-api', '--region', 'us-central1', '--platform', 'managed', '--allow-unauthenticated']
+
 image: 
 - 'gcr.io/$PROJECT_ID/predict-api'
