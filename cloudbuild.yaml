@@ -11,5 +11,5 @@ steps:
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['beta', 'run', 'deploy', 'predict-api', '--image', 'gcr.io/$PROJECT_ID/predict-api', '--region', 'us-central1', '--platform', 'managed', '--allow-unauthenticated']
 
-image: 
+images: 
 - 'gcr.io/$PROJECT_ID/predict-api'
