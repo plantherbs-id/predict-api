@@ -1,4 +1,4 @@
-FROM python:3.11.7-alphine3.18
+FROM python:3.11.0
 
 WORKDIR /predict-api 
 
